@@ -1,7 +1,7 @@
 
 const ringButtons =document.querySelectorAll('.ring-button');
 // console.log(ringButtons);
-const productImageBase="./images/"
+const productImageBasePart="./images/"
 
 for(let i =0; i< ringButtons.length; i++){
     // console.log(ringButtons[i]);
@@ -21,7 +21,7 @@ for(let i =0; i< ringButtons.length; i++){
 
            const productImage =document.getElementById('product-image');
         //    console.log(productImage);
-           productImage.src = productImageBase + color + ".png"
+           productImage.src = productImageBasePart + color + ".png"
 
     })
 }
@@ -114,7 +114,7 @@ document.getElementById('add-to-cart')
         row.innerHTML=`
         <td>
            <div class="flex items-center space-x-2">
-           <img class="w-12 h-12 p-2 object-cover rounded-md " src="${productImageBase}${item.image}" alt="">
+           <img class="w-12 h-12 p-2 object-cover rounded-md " src="${productImageBasePart}${item.image}" alt="">
            <span class="font-semibold">${item.title}</span>
            </div>
         </td>
