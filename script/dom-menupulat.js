@@ -1,7 +1,7 @@
 
 const ringButtons =document.querySelectorAll('.ring-button');
-// console.log(ringButton);
-const productImageBase="../images/"
+// console.log(ringButtons);
+const productImageBase="./images/"
 
 for(let i =0; i< ringButtons.length; i++){
     // console.log(ringButtons[i]);
@@ -10,6 +10,7 @@ for(let i =0; i< ringButtons.length; i++){
     ringBtn.addEventListener('click', function(event){
         // console.log("hello");
         const color =event.target.id.replace("-color", "");
+        // console.log(color);
 
         for(let j =0; j < ringButtons.length; j++){
             ringButtons[j].classList.remove('border-purple-600');
@@ -24,7 +25,6 @@ for(let i =0; i< ringButtons.length; i++){
 
     })
 }
-
 
 function selectWristSize(size){
     // console.log(size);
@@ -44,7 +44,7 @@ function selectWristSize(size){
 const quantityElements=document.querySelectorAll(".quantity-button");
 // console.log(quantityElements);
 for(let btn of quantityElements){
-    // console.log(btn);
+    // console.log(btn.innerText);
     btn.addEventListener('click', function(event){
         // console.log('hello');
 
@@ -62,7 +62,7 @@ let cartTtems=[];
 
 document.getElementById('add-to-cart')
 .addEventListener("click", function(){
-    // console.log('heloo');
+    // console.log('hello');
     const quantity =parseInt(document.getElementById('quantity').innerText);
     // console.log(quantity);
 
@@ -90,7 +90,7 @@ document.getElementById('add-to-cart')
             quantity:quantity,
             price:quantity * parseInt(selectedPrice)
         })
-        console.log(cartTtems);
+        // console.log(cartTtems);
     }
      else {
             alert("Please select a quantity...");
